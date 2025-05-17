@@ -20,7 +20,7 @@ export default function LocationFinderClient() {
 
   return (
     <>
-        <h1>Hello from {locationInfo.city} - client com</h1>
+        <h1>Hello from {locationInfo?.city} - client com</h1>
     </>
   )
 }
