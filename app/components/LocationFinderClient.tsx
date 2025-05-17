@@ -5,21 +5,21 @@ import { useEffect, useState } from "react";
 export default function LocationFinderServer() {
   const [locationInfo, setLocationInfo] = useState({city: 'N/A'});
 
-  useEffect(() => {
-    const getLocationInfo = async () => {
-  
-        const response = await fetch("https://ipwho.is/");
-        const locationData = await response.json();
-        console.log("Client location:", locationData);
-        setLocationInfo(locationData);  
-    }
+  const getLocationInfo = async () => {
+      const response = await fetch("https://ipwho.is/");
+      const locationData = await response.json();
+      console.log(locationData); 
+      setLocationInfo(locationData);
+   
+  }
 
+  useEffect(() => {
     getLocationInfo();
   })
 
   return (
     <>
-      <h1>Hello from {locationInfo.city}  client com</h1>
+        <h1>Hello from {locationInfo.city} - client com</h1>
     </>
-  );
+  )
 }
