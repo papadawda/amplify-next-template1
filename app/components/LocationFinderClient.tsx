@@ -13,7 +13,7 @@ export default function LocationFinderServer() {
 
     useEffect(() => {
         getLocationInfo();
-    })
+    }, []);
 
     return (
         <>
